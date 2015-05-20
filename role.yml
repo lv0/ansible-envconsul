@@ -3,6 +3,7 @@
 - name: Test envconsul role
   hosts: all
   sudo: yes
+  gather_facts: False
   vars_files:
     - "defaults/main.yml"
     - "vars/main.yml"
