@@ -1,0 +1,20 @@
+---
+galaxy_info:
+  author:  mtchavez
+  description: Install envconsul
+  license: MIT
+  min_ansible_version: 1.2
+  - name: GenericUNIX
+    versions:
+      - all
+  - name: Ubuntu
+    versions:
+      - all
+  - name: GenericLinux
+    versions:
+      - all
+  categories:
+    - monitoring
+    - tools
+    - services
+dependencies: []

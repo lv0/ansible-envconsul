@@ -1,0 +1,25 @@
+---
+# tasks file for envconsul
+
+- name: Write install script
+  template: src=install.j2 dest={{envconsul_install_script}} mode=0755
+  tags:
+    - envconsul
+
+- name: Check envconsul version
+  shell: envconsul --version >> tmp.ver 2>&1 && cat tmp.ver  | grep {{envconsul_ver}}
+  ignore_errors: true
+  register: envconsul_ver_matches
+  tags:
+    - envconsul
+
+- name: Install envconsul
+  shell: "{{envconsul_install_script}}"
+  when: envconsul_ver_matches|failed
+  tags:
+    - envconsul
+
+- name: Verify binary
+  shell: "which envconsul"
+  tags:
+    - envconsul

@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#
+# Install envconsul
+#
+
+pushd {{envconsul_dl_dir}} > /dev/null
+
+wget {{envconsul_url}}
+tar -xvf {{envconsul_zip}}
+cd envconsul_{{envconsul_ver}}_{{envconsul_arch}}
+chmod 0755 {{envconsul_bin_name}}
+mv -f {{envconsul_bin_name}} {{envconsul_bin_path}}
+
+popd
