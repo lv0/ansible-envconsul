@@ -7,6 +7,4 @@ before_install:
 install:
   - pip install ansible
 script:
-  - echo "localhost" > inventory
-  - ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no
   - ansible-playbook -i inventory role.yml

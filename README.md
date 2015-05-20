@@ -19,6 +19,7 @@ Useful variables to configure such as the version and arch or even where it is d
 envconsul_ver: "0.5.0"
 envconsul_arch: "linux_amd64"
 envconsul_dl_dir: "/tmp"
+envconsul_bin_path: "/usr/local/bin"
 ```
 
 Dependencies

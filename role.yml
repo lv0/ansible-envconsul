@@ -1,9 +1,9 @@
 ---
 
 - name: Test envconsul role
-  hosts: all
-  sudo: yes
-  gather_facts: False
+  hosts: 127.0.0.1
+  connection: local
+  gather_facts: no
   vars_files:
     - "defaults/main.yml"
     - "vars/main.yml"
