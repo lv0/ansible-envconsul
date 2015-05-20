@@ -7,4 +7,4 @@ before_install:
 install:
   - pip install ansible
 script:
-  - ansible-playbook -i inventory role.yml
+  - ansible-playbook -i inventory role.yml -e envconsul_bin_path=/home/travis/
