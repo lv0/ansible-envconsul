@@ -3,5 +3,8 @@
 - name: Test envconsul role
   hosts: all
   sudo: yes
-  roles:
-    - envconsul
+  vars_files:
+    - "defaults/main.yml"
+    - "vars/main.yml"
+  tasks:
+    - include: "tasks/main.yml"
