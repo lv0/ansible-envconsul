@@ -20,6 +20,6 @@
     - envconsul
 
 - name: Verify binary
-  shell: "which envconsul"
+  shell: "stat {{envconsul_bin_path}}/{{envconsul_bin_name}}"
   tags:
     - envconsul
