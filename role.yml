@@ -1,0 +1,7 @@
+---
+
+- name: Test envconsul role
+  hosts: all
+  sudo: yes
+  roles:
+    - envconsul
