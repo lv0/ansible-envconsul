@@ -1,2 +1,11 @@
 ---
-# defaults file for envconsul
+# vars file for envconsul
+
+envconsul_ver: "0.6.1"
+envconsul_arch: "linux_amd64"
+envconsul_zip: "envconsul_{{envconsul_ver}}_{{envconsul_arch}}.zip"
+envconsul_url: "https://releases.hashicorp.com/envconsul/{{envconsul_ver}}/{{envconsul_zip}}"
+envconsul_bin_path: "/usr/local/bin"
+envconsul_install_script: "{{envconsul_bin_path}}/install-envconsul"
+envconsul_dl_dir: "/tmp"
+envconsul_bin_name: "envconsul"
